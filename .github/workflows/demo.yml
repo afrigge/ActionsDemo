@@ -16,10 +16,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo event trigger name
+      - name: Echoes
         run: |
           echo "Event name:  ${{ github.event_name }}"
           echo "Branch name: ${{ github.ref }}"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Files in repo using tree
         run: tree
