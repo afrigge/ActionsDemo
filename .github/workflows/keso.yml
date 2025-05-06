@@ -6,6 +6,12 @@ jobs:
   KESO:
     runs-on: ubuntu-latest
     steps:
+      - name: Dump runner info
+        run: ${{ toJSON(runner) }}
+        
+      - name: Dump github info
+        run: ${{ toJSON(github) }}
+    
       - name: Checkout code
         uses: actions/checkout@v4.2.2
 
