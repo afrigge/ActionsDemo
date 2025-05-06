@@ -17,3 +17,11 @@ jobs:
 
       - name: Echo stuff
         run: echo "🙌 KESO 🙌" > $GITHUB_STEP_SUMMARY
+
+# ::group::
+# ::notice
+# ::warning
+# ::endgroup::
+
+# Check how GITHUB_STATE works
+
