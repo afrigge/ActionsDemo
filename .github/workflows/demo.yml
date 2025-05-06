@@ -17,7 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo event trigger name
-        run: echo ${{ github.event_name }}
-        
-      - name: Echo branch name
-        run: echo ${{ github.base_ref }}
+        run: |
+          echo "Event name:  ${{ github.event_name }}"
+          echo "Branch name: ${{ github.ref }}"
+
+      - name: Files in repo using tree
+        run: tree
