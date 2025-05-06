@@ -1,0 +1,13 @@
+name: KESO
+run-name: KESOOOO!
+on: workflow_dispatch
+
+jobs:
+  KESO:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Echo stuff
+        run: echo "🙌 KESO 🙌" > $GITHUB_STEP_SUMMARY
