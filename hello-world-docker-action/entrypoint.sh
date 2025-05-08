@@ -2,4 +2,4 @@
 
 echo "Hello $1"
 
-echo "time=$(date)" >> $GITHUB_OUTPUT
+echo "greet-time=$(date)" >> $GITHUB_OUTPUT
