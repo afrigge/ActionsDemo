@@ -1,0 +1,30 @@
+name: Hello World workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      greeter:
+        description: Who are you?
+        type: string
+        required: true
+        default: world
+
+jobs:
+  hello-world:
+    name: Hello World job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run my action
+        id: hello-world
+        uses: ./hello-world-docker-action
+        with:
+          who-to-greet: ${{ inputs.greeter }}
+
+      - name: Output greeting time
+        run: echo "Time ${{ steps.hello-world.outputs.greet-time }} "
