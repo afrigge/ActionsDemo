@@ -14,6 +14,7 @@ on:
     inputs:
       environment:
         description: Which environment?
+        type: environment
         required: true
         default: Test
 
